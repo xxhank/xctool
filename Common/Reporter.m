@@ -20,6 +20,8 @@
 #import <poll.h>
 #import <sys/stat.h>
 
+#import "NSMutableString+Safe.h"
+
 static void ReadFileDescriptorAndOutputLinesToBlock(int inputFD,
                                                     void (^block)(NSString *line))
 {
@@ -56,7 +58,7 @@ static void ReadFileDescriptorAndOutputLinesToBlock(int inputFD,
     if (bytesRead > 0) {
       @autoreleasepool {
         NSString *str = [[NSString alloc] initWithBytes:readBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-        [buffer appendString:str];
+        [buffer appendString_s:str];
         [str release];
 
         processBuffer();
@@ -130,12 +132,12 @@ static void ReadFileDescriptorAndOutputLinesToBlock(int inputFD,
   int i = 0;
   for (NSString *part in [event componentsSeparatedByString:@"-"]) {
     if (i++ == 0) {
-      [selectorName appendString:[part lowercaseString]];
+      [selectorName appendString_s:[part lowercaseString]];
     } else {
-      [selectorName appendString:[[part lowercaseString] capitalizedString]];
+      [selectorName appendString_s:[[part lowercaseString] capitalizedString]];
     }
   }
-  [selectorName appendString:@":"];
+  [selectorName appendString_s:@":"];
 
   SEL sel = sel_registerName([selectorName UTF8String]);
 

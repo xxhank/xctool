@@ -350,6 +350,12 @@
             ReferencedContainer = "container:xctool.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-scheme HomeService -workspace /Volumes/system/&#x6570;&#x636e;/workspace/ios/strategy-home/HomeService/HomeService.xcworkspace -reporter json-compilation-database:compile_commands.json build"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

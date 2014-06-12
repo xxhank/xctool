@@ -15,6 +15,7 @@
 //
 
 #import "LineReader.h"
+#import "NSMutableString+Safe.h"
 
 @implementation LineReader
 
@@ -57,7 +58,7 @@
 
 - (void)appendDataToBuffer:(NSData *)data
 {
-  [_buffer appendString:[[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]];
+  [_buffer appendString_s:[[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]];
 }
 
 - (void)dataAvailableNotification:(NSNotification *)notification

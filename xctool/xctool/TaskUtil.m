@@ -21,7 +21,7 @@
 #import "NSConcreteTask.h"
 #import "Swizzle.h"
 #import "XCToolUtil.h"
-
+#import "NSMutableString+Safe.h"
 static void readOutputs(NSString **outputs, int *fildes, int sz) {
   struct pollfd fds[sz];
   dispatch_data_t data[sz];
@@ -226,7 +226,7 @@ void LaunchTaskAndFeedOuputLinesToBlock(NSTask *task, NSString *description, voi
       if (bytesRead > 0) {
         @autoreleasepool {
           NSString *str = [[NSString alloc] initWithBytes:readBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-          [buffer appendString:str];
+          [buffer appendString_s:str];
           [str release];
 
           processBuffer();

@@ -22,7 +22,7 @@
 #import "OCTestSuiteEventState.h"
 #import "ReporterEvents.h"
 #import "XCToolUtil.h"
-
+#import "NSMutableString+Safe.h"
 @implementation TestRunState
 
 - (instancetype)initWithTests:(NSArray *)testList
@@ -89,7 +89,7 @@
 
 - (void)outputBeforeTestBundleStarts:(NSDictionary *)event
 {
-  [_outputBeforeTestsStart appendString:event[kReporter_OutputBeforeTestBundleStarts_OutputKey]];
+  [_outputBeforeTestsStart appendString_s:event[kReporter_OutputBeforeTestBundleStarts_OutputKey]];
 }
 
 - (void)beginTestSuite:(NSDictionary *)event
@@ -282,7 +282,7 @@
     NSString *minimalCrashReportText = [crashReportText substringToIndex:[crashReportText rangeOfString:@"\nBinary Images:"].location];
 
     [buffer appendFormat:@"CRASH REPORT: %@\n\n", [path lastPathComponent]];
-    [buffer appendString:minimalCrashReportText];
+    [buffer appendString_s:minimalCrashReportText];
     [buffer appendString:@"\n"];
   }
 

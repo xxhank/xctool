@@ -18,7 +18,7 @@
 
 #import <objc/message.h>
 #import <objc/runtime.h>
-
+#import "NSMutableString+Safe.h"
 @class Options;
 
 @implementation Action
@@ -112,7 +112,7 @@
       continue;
     }
 
-    [buffer appendString:@"    "];
+    [buffer appendString_s:@"    "];
 
     NSMutableString *optionExample = [NSMutableString string];
 
@@ -121,14 +121,14 @@
 
       if (option[kActionOptionParamName]) {
         [optionExample appendString:@" "];
-        [optionExample appendString:option[kActionOptionParamName]];
+        [optionExample appendString_s:option[kActionOptionParamName]];
       }
     } else {
-      [optionExample appendString:option[kActionOptionParamName]];
+      [optionExample appendString_s:option[kActionOptionParamName]];
     }
 
-    [buffer appendString:[optionExample stringByPaddingToLength:27 withString:@" " startingAtIndex:0]];
-    [buffer appendString:option[kActionOptionDescription]];
+    [buffer appendString_s:[optionExample stringByPaddingToLength:27 withString:@" " startingAtIndex:0]];
+    [buffer appendString_s:option[kActionOptionDescription]];
     [buffer appendString:@"\n"];
   }
 

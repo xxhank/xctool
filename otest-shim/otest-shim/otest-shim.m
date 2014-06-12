@@ -37,6 +37,8 @@
 #import "dyld-interposing.h"
 #import "dyld_priv.h"
 
+#import "NSMutableString+Safe.h"
+
 @interface XCToolAssertionHandler : NSAssertionHandler
 @end
 
@@ -385,7 +387,7 @@ static ssize_t ___write_nocancel(int fildes, const void *buf, size_t nbyte)
           kReporter_Events_TestOuput,
           @{kReporter_TestOutput_OutputKey: StripAnsi(output)}
         ));
-        [__testOutput appendString:output];
+        [__testOutput appendString_s:output];
         [output release];
       } else if (!__testBundleHasStartedRunning && nbyte > 0) {
         NSString *output = [[NSString alloc] initWithBytes:buf length:nbyte encoding:NSUTF8StringEncoding];
@@ -413,7 +415,7 @@ static ssize_t __write(int fildes, const void *buf, size_t nbyte)
           kReporter_Events_TestOuput,
           @{kReporter_TestOutput_OutputKey: StripAnsi(output)}
         ));
-        [__testOutput appendString:output];
+        [__testOutput appendString_s:output];
         [output release];
       } else if (!__testBundleHasStartedRunning && nbyte > 0) {
         NSString *output = [[NSString alloc] initWithBytes:buf length:nbyte encoding:NSUTF8StringEncoding];
@@ -473,7 +475,7 @@ static ssize_t ___writev_nocancel(int fildes, const struct iovec *iov, int iovcn
           kReporter_Events_TestOuput,
           @{kReporter_TestOutput_OutputKey: StripAnsi(buffer)}
         ));
-        [__testOutput appendString:buffer];
+        [__testOutput appendString_s:buffer];
         [buffer release];
       } else if (!__testBundleHasStartedRunning && iovcnt > 0) {
         NSString *buffer = CreateStringFromIOV(iov, iovcnt);
@@ -501,7 +503,7 @@ static ssize_t __writev(int fildes, const struct iovec *iov, int iovcnt)
           kReporter_Events_TestOuput,
           @{kReporter_TestOutput_OutputKey: StripAnsi(buffer)}
         ));
-        [__testOutput appendString:buffer];
+        [__testOutput appendString_s:buffer];
         [buffer release];
       } else if (!__testBundleHasStartedRunning && iovcnt > 0) {
         NSString *buffer = CreateStringFromIOV(iov, iovcnt);

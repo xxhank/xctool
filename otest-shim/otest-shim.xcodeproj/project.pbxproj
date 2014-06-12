@@ -43,6 +43,8 @@
 		3892D75A1815ACE200E68652 /* EventGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3892D7571815ACE200E68652 /* EventGenerator.h */; };
 		3892D75B1815ACE200E68652 /* EventGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3892D7581815ACE200E68652 /* EventGenerator.m */; };
 		3892D75C1815ACE200E68652 /* EventGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3892D7581815ACE200E68652 /* EventGenerator.m */; };
+		7FF3CB431949B79300C8383E /* NSMutableString+Safe.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF3CB411949B79300C8383E /* NSMutableString+Safe.h */; };
+		7FF3CB441949B79300C8383E /* NSMutableString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3CB421949B79300C8383E /* NSMutableString+Safe.m */; };
 		90F7485418E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F7485218E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.h */; };
 		90F7485518E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F7485218E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.h */; };
 		90F7485618E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F7485318E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.m */; };
@@ -82,6 +84,8 @@
 		28EC2601184EABF50061C3B2 /* XcodeRequiredVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeRequiredVersion.m; sourceTree = "<group>"; };
 		3892D7571815ACE200E68652 /* EventGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventGenerator.h; sourceTree = "<group>"; };
 		3892D7581815ACE200E68652 /* EventGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGenerator.m; sourceTree = "<group>"; };
+		7FF3CB411949B79300C8383E /* NSMutableString+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Safe.h"; sourceTree = "<group>"; };
+		7FF3CB421949B79300C8383E /* NSMutableString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Safe.m"; sourceTree = "<group>"; };
 		90F7485218E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenIsSuperclassOfClassPerformanceFix.h; sourceTree = "<group>"; };
 		90F7485318E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenIsSuperclassOfClassPerformanceFix.m; sourceTree = "<group>"; };
 		AA318BE917E9B43000BF159E /* XCTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTest.h; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 		28897FC6173E50F9004BA024 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7FF3CB411949B79300C8383E /* NSMutableString+Safe.h */,
+				7FF3CB421949B79300C8383E /* NSMutableString+Safe.m */,
 				2887CC3F181E0D9200B0D049 /* DuplicateTestNameFix.h */,
 				2887CC40181E0D9200B0D049 /* DuplicateTestNameFix.m */,
 				2866077418348676000ACB87 /* dyld-interposing.h */,
@@ -225,6 +231,7 @@
 				2839BE8B1843CCFF000D7BEC /* SenTestCaseInvokeTestFix.h in Headers */,
 				28897FC9173E50F9004BA024 /* Swizzle.h in Headers */,
 				28E28FB417968EC50072376C /* ReporterEvents.h in Headers */,
+				7FF3CB431949B79300C8383E /* NSMutableString+Safe.h in Headers */,
 				AA318BEA17E9B43000BF159E /* XCTest.h in Headers */,
 				90F7485418E4FAFF00600D5C /* SenIsSuperclassOfClassPerformanceFix.h in Headers */,
 				2839BE60183FEB6F000D7BEC /* SenTestClassEnumeratorFix.h in Headers */,
@@ -362,6 +369,7 @@
 				283CCA9A16C2EE4C00F2E343 /* otest-shim.m in Sources */,
 				28E44D541811024F00211BD5 /* ParseTestName.m in Sources */,
 				28EC2602184EABF50061C3B2 /* XcodeRequiredVersion.m in Sources */,
+				7FF3CB441949B79300C8383E /* NSMutableString+Safe.m in Sources */,
 				28897FCB173E50F9004BA024 /* Swizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

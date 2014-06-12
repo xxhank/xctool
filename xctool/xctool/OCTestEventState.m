@@ -20,7 +20,7 @@
 
 #import "EventGenerator.h"
 #import "ReporterEvents.h"
-
+#import "NSMutableString+Safe.h"
 @implementation OCTestEventState
 
 - (instancetype)initWithInputName:(NSString *)name
@@ -96,13 +96,13 @@
 - (void)stateTestOutput:(NSString *)output
 {
   NSAssert([self isRunning], @"Test is running.");
-  [_outputAlreadyPublished appendString:output];
+  [_outputAlreadyPublished appendString_s:output];
 }
 
 - (void)appendOutput:(NSString *)output
 {
   if (_outputToPublish) {
-    [_outputToPublish appendString:output];
+    [_outputToPublish appendString_s:output];
   } else {
     _outputToPublish = [[NSMutableString alloc] initWithString:output];
   }

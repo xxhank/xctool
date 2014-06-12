@@ -24,7 +24,7 @@
 #import "NSFileHandle+Print.h"
 #import "ReporterEvents.h"
 #import "TestResultCounter.h"
-
+#import "NSMutableString+Safe.h"
 /**
  Remove leading component of string if it matches cwd.
  */
@@ -733,7 +733,7 @@ static NSString *abbreviatePath(NSString *string) {
 
   NSMutableString *line = [NSMutableString string];
   [line appendFormat:@"[%@] ", event[kReporter_EndStatus_LevelKey]];
-  [line appendString:event[kReporter_EndStatus_MessageKey]];
+  [line appendString_s:event[kReporter_EndStatus_MessageKey]];
   if (duration > 0) {
     [line appendFormat:@" %@", [self formattedTestDuration:duration withColor:NO]];
   }
@@ -885,7 +885,7 @@ static NSString *abbreviatePath(NSString *string) {
           [context appendFormat:@"\n%@", ulineStr];
         }
         if (lineNo + 1 < end) {
-          [context appendString:@"\n"];
+          [context appendString_s:@"\n"];
         }
       }
       return context;

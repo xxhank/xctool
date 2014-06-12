@@ -108,6 +108,7 @@
 		3892D7421811A5CC00E68652 /* EventGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3892D7401811A5CC00E68652 /* EventGenerator.m */; };
 		40623EBE190EA61B004FB374 /* InstallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBD190EA61B004FB374 /* InstallAction.m */; };
 		40623EBF190EA61B004FB374 /* InstallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBD190EA61B004FB374 /* InstallAction.m */; };
+		7FF3CB3C1949B6B400C8383E /* NSMutableString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3CB3B1949B6B400C8383E /* NSMutableString+Safe.m */; };
 		AA318BEF17E9BA3500BF159E /* TestingFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AA318BEE17E9BA3500BF159E /* TestingFramework.m */; };
 		AA318BF017E9BA3500BF159E /* TestingFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AA318BEE17E9BA3500BF159E /* TestingFramework.m */; };
 		AA6C88F71808C2C5006A3581 /* OTestShimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6C88F61808C2C5006A3581 /* OTestShimTests.m */; };
@@ -295,6 +296,8 @@
 		3892D7401811A5CC00E68652 /* EventGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGenerator.m; sourceTree = "<group>"; };
 		40623EBC190EA61B004FB374 /* InstallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallAction.h; sourceTree = "<group>"; };
 		40623EBD190EA61B004FB374 /* InstallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallAction.m; sourceTree = "<group>"; };
+		7FF3CB3A1949B6B400C8383E /* NSMutableString+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Safe.h"; sourceTree = "<group>"; };
+		7FF3CB3B1949B6B400C8383E /* NSMutableString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Safe.m"; sourceTree = "<group>"; };
 		AA194FD118091AE700F56AFC /* ContainsAssertionFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainsAssertionFailure.h; sourceTree = "<group>"; };
 		AA318BEC17E9B7CA00BF159E /* XCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTest.h; sourceTree = "<group>"; };
 		AA318BED17E9BA3500BF159E /* TestingFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingFramework.h; sourceTree = "<group>"; };
@@ -591,6 +594,8 @@
 				AA318BEE17E9BA3500BF159E /* TestingFramework.m */,
 				AA318BEC17E9B7CA00BF159E /* XCTest.h */,
 				2878E7DC184EA4BC00FF4354 /* XcodeRequiredVersion.m */,
+				7FF3CB3A1949B6B400C8383E /* NSMutableString+Safe.h */,
+				7FF3CB3B1949B6B400C8383E /* NSMutableString+Safe.m */,
 			);
 			name = Common;
 			path = ../Common;
@@ -776,6 +781,7 @@
 				CD56770F1766782C003B727C /* BuildStateParser.mm in Sources */,
 				28E28FB81796926A0072376C /* ReportStatus.m in Sources */,
 				28E28FBC1797099E0072376C /* ReporterTask.m in Sources */,
+				7FF3CB3C1949B6B400C8383E /* NSMutableString+Safe.m in Sources */,
 				28F489FC17973BF900068E00 /* NSFileHandle+Print.m in Sources */,
 				28404ADF17C7E16F00CB436A /* Testable.m in Sources */,
 				2869F3C517C82FB80078F078 /* TestableExecutionInfo.m in Sources */,

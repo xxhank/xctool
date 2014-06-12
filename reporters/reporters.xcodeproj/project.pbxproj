@@ -199,7 +199,6 @@
 		CCC0AAF218EC8A92004FD861 /* UserNotificationsReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserNotificationsReporter.h; path = "user-notifications/UserNotificationsReporter.h"; sourceTree = "<group>"; };
 		CCC0AAF318EC8A92004FD861 /* UserNotificationsReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserNotificationsReporter.m; path = "user-notifications/UserNotificationsReporter.m"; sourceTree = "<group>"; };
 		CCC0AB0018EC8AC4004FD861 /* user-notifications */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "user-notifications"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCC0AB0318EC9115004FD861 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		EE61734517E2785F00F02C91 /* Reporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reporter.h; path = ../Common/Reporter.h; sourceTree = "<group>"; };
 		EE61734617E284DD00F02C91 /* Reporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reporter.m; path = ../Common/Reporter.m; sourceTree = "<group>"; };
 		EE9E73E117A7323B008A5ED2 /* TestResultCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResultCounter.h; sourceTree = "<group>"; };
